@@ -1,0 +1,25 @@
+# image will be published to ghcr.io/<user>/<name>
+name: bluefin-gschema-test
+# description will be included in the image's metadata
+description: A starting point for further customization of uBlue images. Make your own! https://ublue.it/making-your-own/
+
+# the base image to build on top of (FROM) and the version tag to use
+base-image: ghcr.io/ublue-os/bluefin
+image-version: 39
+
+modules:
+  - type: script
+    scripts:
+      - remove-files.sh
+
+  - type: files
+    files:
+      - usr: /usr
+
+  - type: gschema-overrides
+    include:
+      - z0-bluefin.gschema.override
+      
+  - type: script
+    scripts:
+      - signing.sh
