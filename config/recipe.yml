@@ -19,7 +19,3 @@ modules:
   - type: gschema-overrides
     include:
       - z0-bluefin.gschema.override
-      
-  - type: script
-    scripts:
-      - signing.sh
