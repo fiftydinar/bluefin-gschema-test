@@ -18,4 +18,4 @@ modules:
 
   - type: gschema-overrides
     include:
-      - z0-bluefin.gschema.override
+      - zz0-bluefin.gschema.override
